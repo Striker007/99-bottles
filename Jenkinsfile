@@ -6,5 +6,10 @@ pipeline {
         echo 'so composer'
       }
     }
+    stage('run php script') {
+      steps {
+        sh 'php ./bottle.php '
+      }
+    }
   }
 }
