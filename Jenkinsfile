@@ -11,5 +11,10 @@ pipeline {
         sh 'php ./bottle.php '
       }
     }
+    stage('ping') {
+      steps {
+        sh 'ping -c 20 8.8.8.8'
+      }
+    }
   }
 }
